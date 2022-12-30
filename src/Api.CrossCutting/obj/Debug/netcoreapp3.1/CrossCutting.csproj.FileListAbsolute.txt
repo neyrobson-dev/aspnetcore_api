@@ -1,9 +1,0 @@
-D:\Ney\Projetos\CSharp\aspnetcore_api\src\Api.CrossCutting\bin\Debug\netcoreapp3.1\CrossCutting.deps.json
-D:\Ney\Projetos\CSharp\aspnetcore_api\src\Api.CrossCutting\bin\Debug\netcoreapp3.1\CrossCutting.dll
-D:\Ney\Projetos\CSharp\aspnetcore_api\src\Api.CrossCutting\bin\Debug\netcoreapp3.1\CrossCutting.pdb
-D:\Ney\Projetos\CSharp\aspnetcore_api\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.csprojAssemblyReference.cache
-D:\Ney\Projetos\CSharp\aspnetcore_api\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.AssemblyInfoInputs.cache
-D:\Ney\Projetos\CSharp\aspnetcore_api\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.AssemblyInfo.cs
-D:\Ney\Projetos\CSharp\aspnetcore_api\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.csproj.CoreCompileInputs.cache
-D:\Ney\Projetos\CSharp\aspnetcore_api\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.dll
-D:\Ney\Projetos\CSharp\aspnetcore_api\src\Api.CrossCutting\obj\Debug\netcoreapp3.1\CrossCutting.pdb

@@ -236,10 +236,15 @@ _Pvt_Extensions
 
 # Specific
 src/Api.Services/bin/*
+src/Api.Services/obj/debug/*
 src/Api.Domain/bin/*
+src/Api.Domain/obj/debug/*
 src/Api.Data/bin/*
+src/Api.Data/obj/debug/*
 src/Api.CrossCutting/bin/*
+src/Api.CrossCutting/obj/debug/*
 src/Api.Application/bin/*
+src/Api.Application/obj/debug/*
 
 src/.idea
 
