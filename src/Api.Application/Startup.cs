@@ -34,13 +34,13 @@ namespace application
               // TermsOfService = new Uri("http://www.mfrinfo.com.br"),
               // Contact = new OpenApiContact
               // {
-              //     Name = "Marcos Fabricio Rosa",
-              //     Email = "mfr@mail.com",
-              //     Url = new Uri("http://www.mfrinfo.com.br")
+              //     Name = "Ney Robson Araujo Ganma",
+              //     Email = "neyrobson.dev@gmail.com",
+              //     // Url = new Uri("http://www.mfrinfo.com.br")
               // },
               // License = new OpenApiLicense
               // {
-              //     Name = "Termo de Licença de Uso",
+                // Name = "Termo de Licença de Uso",
               //     Url = new Uri("http://www.mfrinfo.com.br")
               // }
             });
