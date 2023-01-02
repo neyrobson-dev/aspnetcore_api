@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Api.CrossCutting.DependencyInjection;
+using Api.CrossCutting.Mappings;
 using Api.Domain.Security;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
@@ -28,9 +30,21 @@ namespace application
         {
           services.AddControllers();
 
+          // Injeção de dependencias (services)
           ConfigureService.ConfigureDependenciesService(services);
+          // Injeção de dependencias (repositories)
           ConfigureRepository.ConfigureDependenciesRepository(services);
 
+          // Automapper
+          var configMapper = new AutoMapper.MapperConfiguration(cfg => {
+            cfg.AddProfile(new DtoToModelProfile());
+            cfg.AddProfile(new EntityToDtoProfile());
+            cfg.AddProfile(new ModelToEntityProfile());
+          });
+          IMapper mapper = configMapper.CreateMapper();
+          services.AddSingleton(mapper);
+
+          // JWT
           var signingConfiguration = new SigningConfiguration();
           services.AddSingleton(signingConfiguration);
 
@@ -60,6 +74,7 @@ namespace application
               );
           });
 
+          // Playground Swagger
           services.AddSwaggerGen(c =>
           {
             c.SwaggerDoc("v1", new OpenApiInfo
@@ -103,6 +118,7 @@ namespace application
               }
             });
           });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
