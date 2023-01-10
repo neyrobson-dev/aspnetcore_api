@@ -21,9 +21,12 @@
       },
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "DB_CONNECTION": "server=localhost;port=3306;database=curso;uid=root;password=cafefaca@102030",
+        "DB_CONNECTION": "Persist Security Info=True;server=localhost;port=3306;database=curso;uid=root;password=cafefaca@102030",
         "DATABASE": "MySQL",
-        "MIGRATION": "APLICAR"
+        "MIGRATION": "APLICAR",
+        "Audience": "ExemploAudience",
+        "Issuer": "ExemploIssue",
+        "Seconds": "28800"
       },
       "sourceFileMap": {
         "/Views": "${workspaceFolder}/Views"

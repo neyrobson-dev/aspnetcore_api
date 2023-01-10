@@ -18,19 +18,16 @@ namespace Api.Service.Services
     private IUserRepository _repository;
 
     private SigningConfiguration _signingConfiguration;
-    private TokenConfiguration _tokenConfiguration;
     private IConfiguration _configuration { get; }
 
     public LoginService(
         IUserRepository repository,
         SigningConfiguration signingConfiguration,
-        TokenConfiguration tokenConfiguration,
         IConfiguration configuration
       )
     {
       _repository = repository;
       _signingConfiguration = signingConfiguration;
-      _tokenConfiguration = tokenConfiguration;
       _configuration = configuration;
     }
 
@@ -42,7 +39,8 @@ namespace Api.Service.Services
         baseUser = await _repository.FindByLogin(user.Email);
         if (baseUser == null)
         {
-          return new {
+          return new
+          {
             authenticated = false,
             message = "Falha ao autenticar"
           };
@@ -59,7 +57,7 @@ namespace Api.Service.Services
           );
 
           DateTime createDate = DateTime.Now;
-          DateTime expirationDate = createDate + TimeSpan.FromSeconds(_tokenConfiguration.Seconds); // 60 segundos
+          DateTime expirationDate = createDate + TimeSpan.FromSeconds(Convert.ToInt32(Environment.GetEnvironmentVariable("Seconds")));
 
           var handler = new JwtSecurityTokenHandler();
           string token = CreateToken(identity, createDate, expirationDate, handler);
@@ -69,7 +67,8 @@ namespace Api.Service.Services
       }
       else
       {
-        return new {
+        return new
+        {
           authenticated = false,
           message = "Falha ao autenticar"
         };
@@ -80,8 +79,8 @@ namespace Api.Service.Services
     {
       var securityToken = handler.CreateToken(new SecurityTokenDescriptor
       {
-        Issuer = _tokenConfiguration.Issuer,
-        Audience = _tokenConfiguration.Audiance,
+        Issuer = Environment.GetEnvironmentVariable("Issuer"),
+        Audience = Environment.GetEnvironmentVariable("Audience"),
         SigningCredentials = _signingConfiguration.SigningCredentials,
         Subject = identity,
         NotBefore = createDate,
