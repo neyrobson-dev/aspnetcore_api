@@ -19,7 +19,7 @@ namespace Api.Service.Test.AutoMapper
         Name = Faker.Name.FullName(),
         Email = Faker.Internet.Email(),
         CreatedAt = DateTime.UtcNow,
-        UpdateAt = DateTime.UtcNow
+        UpdatedAt = DateTime.UtcNow
       };
 
       var listaEntity = new List<UserEntity>();
@@ -31,7 +31,7 @@ namespace Api.Service.Test.AutoMapper
           Name = Faker.Name.FullName(),
           Email = Faker.Internet.Email(),
           CreatedAt = DateTime.UtcNow,
-          UpdateAt = DateTime.UtcNow
+          UpdatedAt = DateTime.UtcNow
         };
         listaEntity.Add(item);
       }
@@ -42,7 +42,7 @@ namespace Api.Service.Test.AutoMapper
       Assert.Equal(entity.Name, model.Name);
       Assert.Equal(entity.Email, model.Email);
       Assert.Equal(entity.CreatedAt, model.CreatedAt);
-      Assert.Equal(entity.UpdateAt, model.UpdateAt);
+      Assert.Equal(entity.UpdatedAt, model.UpdatedAt);
 
       //Entity para Dto
       var userDto = Mapper.Map<UserDto>(entity);
@@ -71,7 +71,7 @@ namespace Api.Service.Test.AutoMapper
       Assert.Equal(userDtoUpdateResult.Id, entity.Id);
       Assert.Equal(userDtoUpdateResult.Name, entity.Name);
       Assert.Equal(userDtoUpdateResult.Email, entity.Email);
-      Assert.Equal(userDtoUpdateResult.UpdateAt, entity.UpdateAt);
+      Assert.Equal(userDtoUpdateResult.UpdateAt, entity.UpdatedAt);
 
       //Dto para Model
       var userModel = Mapper.Map<UserModel>(userDto);

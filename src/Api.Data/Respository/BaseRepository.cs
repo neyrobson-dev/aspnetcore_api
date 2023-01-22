@@ -47,7 +47,7 @@ namespace Api.Data.Respository
         if (result == null)
           return null;
 
-        entity.UpdateAt = DateTime.UtcNow;
+        entity.UpdatedAt = DateTime.UtcNow;
         entity.CreatedAt = result.CreatedAt;
 
         _context.Entry(result).CurrentValues.SetValues(entity);
