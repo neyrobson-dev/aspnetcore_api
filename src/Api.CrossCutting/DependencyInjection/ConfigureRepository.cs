@@ -14,13 +14,17 @@ namespace Api.CrossCutting.DependencyInjection
     public static void ConfigureDependenciesRepository(IServiceCollection serviceCollection)
     {
       serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+
       serviceCollection.AddScoped<IUserRepository, UserImplementation>();
+      serviceCollection.AddScoped<IUfRepository, UfImplementation>();
+      serviceCollection.AddScoped<IMunicipioRepository, MunicipioImplementation>();
+      serviceCollection.AddScoped<ICepRepository, CepImplementation>();
 
       // if (Environment.GetEnvironmentVariable("DATABASE").ToLower() == "MySQL".ToLower())
       // {
-        serviceCollection.AddDbContext<MyContext>(
-          options => options.UseMySql(Environment.GetEnvironmentVariable("DB_CONNECTION"))
-        );
+      serviceCollection.AddDbContext<MyContext>(
+        options => options.UseMySql(Environment.GetEnvironmentVariable("DB_CONNECTION"))
+      );
       // }
     }
   }
