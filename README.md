@@ -1,4 +1,4 @@
-# Curso de API com .NETCore3.1/.NET5.0 - Na Prática
+# Curso de API com .NETCore3.1/.NET5.0/.NET6.0 - Na Prática
 
 ## Passo a Passo
 

@@ -101,7 +101,7 @@ namespace application
         c.SwaggerDoc("v1", new OpenApiInfo
         {
           Version = "v1",
-          Title = "Curso de API com .NETCore3.1/.NET5.0 - Na Prática",
+          Title = "Curso de API com .NETCore3.1/.NET5.0/.NET6.0 - Na Prática",
           Description = "Arquitetura DDD",
           // TermsOfService = new Uri("http://www.mfrinfo.com.br"),
           // Contact = new OpenApiContact
