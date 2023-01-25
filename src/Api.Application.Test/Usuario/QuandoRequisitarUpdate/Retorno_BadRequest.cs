@@ -26,7 +26,7 @@ namespace Api.Application.Test.Usuario.QuandoRequisitarUpdate
           Id = Guid.NewGuid(),
           Name = nome,
           Email = email,
-          UpdateAt = DateTime.UtcNow
+          UpdatedAt = DateTime.UtcNow
         }
       );
 

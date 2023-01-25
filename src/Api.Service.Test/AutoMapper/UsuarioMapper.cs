@@ -71,7 +71,7 @@ namespace Api.Service.Test.AutoMapper
       Assert.Equal(userDtoUpdateResult.Id, entity.Id);
       Assert.Equal(userDtoUpdateResult.Name, entity.Name);
       Assert.Equal(userDtoUpdateResult.Email, entity.Email);
-      Assert.Equal(userDtoUpdateResult.UpdateAt, entity.UpdatedAt);
+      Assert.Equal(userDtoUpdateResult.UpdatedAt, entity.UpdatedAt);
 
       //Dto para Model
       var userModel = Mapper.Map<UserModel>(userDto);

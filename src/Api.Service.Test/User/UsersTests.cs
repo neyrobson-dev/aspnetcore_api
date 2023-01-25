@@ -71,7 +71,7 @@ namespace Api.Service.Test.User
         Id = IdUser,
         Name = NameUserChanged,
         Email = EmailUserChanged,
-        UpdateAt = DateTime.UtcNow
+        UpdatedAt = DateTime.UtcNow
       };
     }
   }
